@@ -9,20 +9,20 @@ spec:
   storageClassName: manual
   capacity: 
     storage: 1Gi
-  accessMode:
-    - ReadWriteMany:
-  hostName:
+  accessModes:
+    - ReadWriteMany
+  hostPath:
     path: "/mnt/data"
 ---
 apiVersion: v1
-kind: PersistentVolumeClain
+kind: PersistentVolumeClaim
 metadata:
   name: postgres-claim
   labels:
     app: postgres
 spec:
   storageClassName: manual
-  accessMode:
+  accessModes:
     - ReadWriteMany
   resources:
     requests:
