@@ -11,8 +11,8 @@ spec:
       app: postgres
   template:
     metadata:
-    labels:
-      app: postgres
+      labels:
+        app: postgres
     spec:
       containers:
         - name: postgres
