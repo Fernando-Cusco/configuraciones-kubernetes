@@ -18,4 +18,4 @@ spec:
         - name: postgres
           image: postgres:latest
           ports:
-           - containerPort: 5432
+            - containerPort: 5432
