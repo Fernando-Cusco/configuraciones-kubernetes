@@ -5,14 +5,14 @@ metadata:
   labels:
     type: local
     app: postgres
-  spec:
-    storageClassName: manual
-    capacity: 
-      storage: 1Gi
-    accessMode:
-      - ReadWriteMany:
-    hostName:
-      path: "/mnt/data"
+spec:
+  storageClassName: manual
+  capacity: 
+    storage: 1Gi
+  accessMode:
+    - ReadWriteMany:
+  hostName:
+    path: "/mnt/data"
 ---
 apiVersion: v1
 kind: PersistentVolumeClain
