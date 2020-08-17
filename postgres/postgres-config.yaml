@@ -24,8 +24,8 @@ spec:
                 name: postgres-config
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
-              name: postgresdb
+              name: test
       volumes:
-        - name: postgredb
+        - name: test
           persistentVolumeClaim:
             claimName: postgres-claim
