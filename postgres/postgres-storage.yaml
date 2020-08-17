@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: PersistenyVolume
+metadata:
+  name: postgres-volume
+  labels:
+    type: local
+    app: postgres
+  spec:
+    storageClassName: manual
+    capacity: 
+      storage: 1Gi
+    accessMode:
+      - ReadWriteMany:
+    hostName:
+      path: "/mnt/data"
+---
+apiVersion: v1
+kind: PersistenyVolumeClain
+metadata:
+  name: postgres-claim
+  labels:
+    app: postgres
+spec:
+  storageClassName: manual
+  accessMode:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
